@@ -1,3 +1,4 @@
 psutil==5.9.8
 pyautogui==0.9.54
 django==4.1.13
+python==3.10.0
