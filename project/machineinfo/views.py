@@ -7,7 +7,7 @@ import datetime
 import subprocess 
 import sys
 import time
-import pyautogui 
+
 from django.shortcuts import render
 
 def getosinfo(request):
@@ -125,7 +125,7 @@ def getosinfo(request):
     num_running_processes = len(psutil.pids())
 
     # Get the current screen resolution
-    screen_resolution = pyautogui.size()
+    
 
     import subprocess
 
@@ -171,7 +171,6 @@ def getosinfo(request):
         'uptime': uptime,
         'num_logged_in_users': num_logged_in_users,
         'num_running_processes': num_running_processes,
-        'screen_resolution': screen_resolution,
 
     }
 
