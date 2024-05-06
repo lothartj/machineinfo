@@ -21,7 +21,7 @@ def getosinfo(request):
     machine_network_name = socket.gethostname()
 
     # Get machine IP address
-    machine_ip_address = socket.gethostbyname(machine_network_name)
+    machine_ip_address = socket.gethostbyname(machine_network_name) 
 
     # Get operating system name
     operating_system_name = os.name
