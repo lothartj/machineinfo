@@ -53,7 +53,11 @@ def getosinfo(request):
     system_uptime = format_uptime(psutil.boot_time())
 
     # Get battery percentage
-    battery_percentage = psutil.sensors_battery().percent
+    battery = psutil.sensors_battery()
+    if battery is not None:
+        battery_percentage = battery.percent
+    else:
+        battery_percentage = 'No battery detected'
 
     # Get battery power status
     battery_sensors = psutil.sensors_battery()
